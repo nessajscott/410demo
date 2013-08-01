@@ -8,7 +8,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Demo Widgets</title>
+<title></title>
 <link href="c/boilerplate.css" rel="stylesheet" type="text/css">
 <link href="c/layout.css" rel="stylesheet" type="text/css">
 

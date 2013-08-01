@@ -8,9 +8,9 @@
   <?php require_once('includes/header.inc.php'); ?>
   
   <section class="main">
-  	<h2>Welcome</h2>
+  	<h2>Demo Widgets</h2>
   	<figure>
-    	<img src="i/bruce.jpg" alt="Bruce Lawson is awesome!" />
+    	<img src="i/decor1.png" alt="Bruce Lawson is awesome!" />
     	<figcaption>According to Bruce Lawson, the section tag is NOT another DIV.</figcaption>
     </figure>
     <p>In HTML 5 you can specifically mark up all the “secondary” content on a page such as navigation, branding, copyright notices, so it feels odd that you can’t specifically mark up the most important part of your page—the content.</p>

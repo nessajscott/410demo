@@ -8,17 +8,30 @@
   <?php require_once('includes/header.inc.php'); ?>
   
   <section class="main">
-  	<h2>Welcome</h2>
-  	<figure>
-    	<img src="i/bruce.jpg" alt="Bruce Lawson is awesome!" />
-    	<figcaption>According to Bruce Lawson, the section tag is NOT another DIV.</figcaption>
-    </figure>
-    <p>In HTML 5 you can specifically mark up all the “secondary” content on a page such as navigation, branding, copyright notices, so it feels odd that you can’t specifically mark up the most important part of your page—the content.</p>
-<p>
-But what would be the purpose of marking it up specifically, anyway? If you need to style it, use a div. An assistive technlogy like a screenreader can find the main content because it is the first thing inside a page that isn’t a header, nav or footer.</p>
+  	<h2>Contact</h2>
+	<form action="" method="">
+		<fieldset>
+			<legend>Got a Question? Ask away!</legend>
+			<ol>
+				<li>
+					<label for="name">Your Full Name:</label>
+					<input type="text" name="name" placeholder="i.e. John Smith" size="28" />
+				</li>
+				<li>
+					<label for="email">Email Address:</label>
+					<input type="email" name="email" placeholder="i.e. jon@me.com" size="28" />
+				</li>
+				<li>
+					<label for="comments">Comments:</label>
+					<textarea name="comments" placeholder="share your thoughts" 
+					cols="30" rows="8"></textarea>
+				</li>
+				<li><input type="submit" name="submitted" value="Send Now"></li>
+			</ol>
+		</fieldset>
+	</form>
   </section>
-  
-  <?php include_once('includes/sidebar.inc.php');?>
+
   
   <?php include_once('includes/footer.inc.php');?>
   
