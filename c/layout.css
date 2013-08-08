@@ -12,7 +12,7 @@ img, object, embed, video {
 }
 
 
-body{background:#000;
+body{background:#FFF;
 }
 
 /*
@@ -131,6 +131,29 @@ aside{
 	font-style:italic;
 	color:#888;
 }
+
+label,select,textarea, input{display:block;
+							margin:1.2em 1em;
+							
+}
+
+lengend{font-size:1em;
+}
+
+label, legend {font-weight:bold;
+			margin-bottom:0;
+			
+}
+
+form{width:50%;
+	margin: 1em auto;
+	background:#0FC;
+	padding:1em;
+}
+
+textarea{padding:5em;
+}
+
 
 /*products page specific*/
 .products h3{

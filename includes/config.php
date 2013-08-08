@@ -21,4 +21,5 @@ if(mysqli_connect_errno())
 {
 	echo 'Error:Could noet connect to the database';
 	exit();
+}
 ?>
