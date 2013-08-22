@@ -2,6 +2,7 @@
 	
 	
 	require_once('../includes/config.php');
+	require_once('PasswordHash.php');
 	
 	if($_POST['submitted'])
 	{
@@ -11,43 +12,39 @@
 		$user=trim($_POST['user']);
 		$pass=trim($_POST['pass']);
 		
-		
-		if (get_magic_quotes_gpc())
+		if(empty($user) || empty($pass))
 		{
-			$user= stripslashes($user);
-			$user= stripslashes($pass);
+			 echo 'please fill in the username and password fields';	
 		}
-		
-		
-		$sql= "SELECT * FROM admins WHERE username='$user'";
-		$myData=$db->query($sql);
-		$row=$myData->fetch_assoc();
-		print_r($row);exit;
-		
-		if ($row['username']=== $user && $row ['password']===$pass)
-		{
-			//header('Location: update.php');
-			echo 'it worked';
-			print_r($row);
-		}
-		
 		else
-		
 		{
-			echo 'Sorry, login information incorrect';
+			$hasher = new PasswordHash(8, false);
+			$stored_hash = '*';
+			
+			$sql = "SELECT * FROM admins WHERE username='$user'";
+			$myData = $db->query($sql)
+			OR exit('DB query failed');
+			
+			$row = $myData->fetch_assoc();
+			$db->close();
+			
+			$stored_hash = $row['password'];
+			$check = $hasher->CheckPassword($pass, $stored_hash);
+			if($check && $row['username'] == $user)
+			{	
+				session_start();
+			    $_SESSION['login'] = 'y';
+				header('Location: update.php');
+			}
+			else
+			{
+				echo 'Sorry, login information incorrect';
+			}
 		}
 	}
 
 
-	
-
-
 ?>
-
-
-
-
-
 
 
 <!doctype html>

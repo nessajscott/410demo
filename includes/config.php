@@ -6,10 +6,10 @@ putenv('TZ=US/Eastern');
 
 
 //create D8 constants
-define ('HOST',    'Localhost');
-define ('DBNAME',    'scottvj_cms');
-define ('USER',    'scottvj_nessa');
-define ('PASS',    'allmine92');
+define ('HOST','localhost');
+define ('DBNAME','nessasco_imd410');
+define ('USER','nessa_410');
+define ('PASS','allmine92');
 
 
 
@@ -19,7 +19,7 @@ $db= new mysqli(HOST,USER,PASS,DBNAME);
 
 if(mysqli_connect_errno())
 {
-	echo 'Error:Could noet connect to the database';
+	echo 'Error:Could not connect to the database';
 	exit();
 }
 ?>
